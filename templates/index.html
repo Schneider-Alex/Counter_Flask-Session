@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counterbtn{
+            color: black;
+            background-color: coral;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button class=counterbtn>{{session['counterval']}}</button>
+    <form action="/plustwo" method="post">
+        <button  class=counterbtn >Plus Two</button>
+    </form>
+    <form action="/reset" method="post">
+        <button  class=counterbtn >Reset</button>
+    </form>
+    <form action="/userchoice" method="post">
+        <input type="text" value="Enter a number!" name='userval'>
+        <input type="submit" value="Add MY Value">
+
+    </form>
+
+    
+</body>
+</html>
