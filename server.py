@@ -25,10 +25,12 @@ def plustwo():
     session['counterval']+=1
     return redirect('/')
 
-# @app.route('/userchoice',methods=['POST'])
-# def userinput():
-#     session['counterval']+= int(index.userval)
-#     return redirect('/')
+@app.route('/userchoice',methods=['POST','GET'])
+def userinput():
+    userval=request.form.get("userval")
+    session['counterval']+= (int(userval)-1)
+    return redirect('/')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
