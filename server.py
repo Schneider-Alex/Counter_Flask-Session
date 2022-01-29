@@ -14,7 +14,6 @@ def index():
         session['counterval'] += 1
     return render_template("index.html")
 
-
 @app.route('/reset', methods=['POST'])
 def reset():
     session.clear()
